@@ -21,7 +21,7 @@ export default function Dropdown({ buttonContent, children, position }) {
       <button onClick={() => setIsOpen(true)}>{buttonContent}</button>
 
       {isOpen && (
-        <div className={`absolute ${position}-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-10`}>
+        <div className={`absolute ${position === 'left' ? 'left-0' : 'right-0'} mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg z-10`}>
           {children}
         </div>
       )}
